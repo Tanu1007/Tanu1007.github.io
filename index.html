@@ -1,406 +1,1145 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>TANVI PATEL - AGENT PROTOCOL</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-		<link rel="stylesheet" href="assets/css/valorant.css" />
-	</head>
-	<body>
-		<!-- Navigation -->
-		<nav class="valorant-nav">
-			<div class="nav-container">
-				<div class="nav-logo">AGENT: TANVI</div>
-				<ul class="nav-menu">
-					<li><a href="#home" class="nav-link">HOME</a></li>
-					<li><a href="#experience" class="nav-link">EXPERIENCE</a></li>
-					<li><a href="#projects" class="nav-link">PROJECTS</a></li>
-					<li><a href="#skills" class="nav-link">ABILITIES</a></li>
-					<li><a href="#contact" class="nav-link">CONTACT</a></li>
-				</ul>
-			</div>
-		</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tanvi Patel — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
-		<!-- Hero Section -->
-		<section id="home" class="hero">
-			<div class="hero-content">
-				<div class="agent-designation">PROTOCOL ACTIVATED</div>
-				<h1 class="agent-name">TANVI PATEL</h1>
-				<p class="agent-role">Backend Engineer • AI Systems Architect • Full-Stack Developer</p>
-				<div class="agent-stats">
-					<div class="stat-item">
-						<span class="stat-label">OPERATIONAL TIME</span>
-						<span class="stat-value">3+ YRS</span>
-					</div>
-					<div class="stat-item">
-						<span class="stat-label">MISSIONS COMPLETED</span>
-						<span class="stat-value">10+</span>
-					</div>
-					<div class="stat-item">
-						<span class="stat-label">LOCATION</span>
-						<span class="stat-value">NEW DELHI</span>
-					</div>
-				</div>
-				<div class="cta-buttons">
-					<a href="#projects" class="btn btn-primary">VIEW OPERATIONS</a>
-					<a href="#contact" class="btn btn-secondary">ENGAGE PROTOCOL</a>
-				</div>
-			</div>
-		</section>
+:root{
+  --bg:#080810;
+  --surface:#0f0f1a;
+  --card:#131320;
+  --card2:#181828;
+  --border:#242438;
+  --border2:#2e2e48;
+  --gold:#c9a96e;
+  --gold2:#e8c98a;
+  --blue:#7bafd4;
+  --rose:#c97b8a;
+  --text:#edeae0;
+  --muted:#6e6d88;
+  --muted2:#9896b0;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --mono:'DM Mono','Courier New',monospace;
+}
 
-		<!-- Experience Section -->
-		<section id="experience" class="experience-section">
-			<div class="section-header">
-				<h2>OPERATIONAL HISTORY</h2>
-				<div class="header-line"></div>
-			</div>
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--mono);
+  font-weight:300;
+  line-height:1.75;
+  min-height:100vh;
+  overflow-x:hidden;
+}
 
-			<div class="experience-container">
-				<!-- Experience 1 -->
-				<div class="experience-card">
-					<div class="card-header">
-						<h3>BACKEND ENGINEER (DEPUTY MANAGER)</h3>
-						<span class="company">AIRTEL X LABS</span>
-						<span class="duration">JUL 2022 - OCT 2025</span>
-					</div>
-					<div class="card-content">
-						<p class="role-description">Engineered scalable backend systems and microservices for telecom infrastructure serving millions of users across multiple regions.</p>
-						<ul class="achievements">
-							<li><strong>CPaaS International:</strong> Led deployments across 10 OpCos enhancing communication services for millions</li>
-							<li><strong>Performance Optimization:</strong> Migrated wallet system from SQL to Aerospike, achieving 5× faster transactions (1000+ TPS)</li>
-							<li><strong>Payment Integration:</strong> Integrated Payment Gateway modules with robust callback and refund mechanisms</li>
-							<li><strong>IQ Platform:</strong> Implemented 2FA and OAuth 2.0, improving authentication speed by 15%</li>
-							<li><strong>Contact Book Microservice:</strong> Built IQ Contact Book supporting 1000+ enterprise clients with bulk operations</li>
-							<li><strong>Architecture Rework:</strong> Rearchitected Messaging Service, increasing throughput from 1500 TPS to 3500 TPS</li>
-						</ul>
-						<div class="tech-stack">
-							<span class="tech-badge">Java</span>
-							<span class="tech-badge">Spring Boot</span>
-							<span class="tech-badge">Kafka</span>
-							<span class="tech-badge">Aerospike</span>
-							<span class="tech-badge">Elasticsearch</span>
-							<span class="tech-badge">MongoDB</span>
-							<span class="tech-badge">MySQL</span>
-						</div>
-					</div>
-				</div>
+/* grain */
+body::after{
+  content:'';position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:9998;opacity:.5;
+}
 
-				<!-- Experience 2 -->
-				<div class="experience-card">
-					<div class="card-header">
-						<h3>TURBO INTERN</h3>
-						<span class="company">WIPRO LIMITED</span>
-						<span class="duration">JUN 2021 - JUL 2021</span>
-					</div>
-					<div class="card-content">
-						<p class="role-description">Developed real-time computer vision system for medical monitoring applications.</p>
-						<ul class="achievements">
-							<li>Developed real-time computer vision system analyzing ECG graphs</li>
-							<li>Deployed across 100+ ICUs enhancing patient monitoring capabilities</li>
-							<li>Improved medical data accuracy through automated anomaly detection</li>
-						</ul>
-						<div class="tech-stack">
-							<span class="tech-badge">Python</span>
-							<span class="tech-badge">OpenCV</span>
-							<span class="tech-badge">Computer Vision</span>
-						</div>
-					</div>
-				</div>
+/* ─── NAV ─── */
+nav{
+  position:fixed;top:0;left:0;right:0;
+  z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 40px;
+  height:60px;
+  background:rgba(8,8,16,0.85);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{
+  font-family:var(--serif);
+  font-size:20px;font-weight:600;
+  color:var(--gold);
+  letter-spacing:0.02em;
+  cursor:pointer;
+}
+.nav-links{display:flex;gap:0;align-items:center;}
+.nav-link{
+  font-size:11px;letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--muted2);padding:0 18px;height:60px;
+  display:flex;align-items:center;cursor:pointer;
+  border-bottom:2px solid transparent;
+  transition:color .2s,border-color .2s;
+  user-select:none;
+}
+.nav-link:hover{color:var(--text);}
+.nav-link.active{color:var(--gold);border-bottom-color:var(--gold);}
 
-				<!-- Experience 3 -->
-				<div class="experience-card">
-					<div class="card-header">
-						<h3>JUNIOR MOBILE APP DEVELOPER</h3>
-						<span class="company">GELIOSE MOBILITY</span>
-						<span class="duration">JUN 2021 - JUL 2021</span>
-					</div>
-					<div class="card-content">
-						<p class="role-description">Developed Android application for EV startup with real-time communication features.</p>
-						<ul class="achievements">
-							<li>Built Android app featuring user authentication and Bluetooth discovery</li>
-							<li>Implemented real-time chat for 5,000+ users</li>
-							<li>Enhanced communication and operational efficiency</li>
-						</ul>
-						<div class="tech-stack">
-							<span class="tech-badge">Android</span>
-							<span class="tech-badge">Java</span>
-							<span class="tech-badge">Bluetooth</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+/* ─── PAGES ─── */
+.page{
+  display:none;
+  min-height:100vh;
+  padding-top:60px;
+  animation:fadeIn .4s ease;
+}
+.page.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 
-		<!-- Projects Section -->
-		<section id="projects" class="projects-section">
-			<div class="section-header">
-				<h2>TACTICAL OPERATIONS</h2>
-				<div class="header-line"></div>
-			</div>
+.wrap{max-width:1080px;margin:0 auto;padding:0 40px;}
 
-			<div class="projects-grid">
-				<!-- Project 1 -->
-				<div class="project-card">
-					<div class="project-header">
-						<h3>SELF-POWERED IoT DEVICES</h3>
-						<span class="project-date">JAN 2022 - MAY 2022</span>
-					</div>
-					<p class="project-description">Simulated and optimized lead-free perovskite solar cells (Cs₂AgBiBr₆) achieving up to 28.9% efficiency under white LED illumination for sustainable indoor energy harvesting.</p>
-					<div class="tech-stack">
-						<span class="tech-badge">SCAPS-1D</span>
-						<span class="tech-badge">MATLAB</span>
-						<span class="tech-badge">Device Simulation</span>
-						<span class="tech-badge">Data Analysis</span>
-					</div>
-				</div>
+/* ─── SECTION HEADERS ─── */
+.sec-head{
+  display:flex;align-items:baseline;gap:14px;
+  margin-bottom:48px;padding-bottom:20px;
+  border-bottom:1px solid var(--border);
+}
+.sec-num{font-size:10px;color:var(--gold);letter-spacing:.15em;opacity:.7;}
+.sec-title{
+  font-family:var(--serif);
+  font-size:clamp(28px,4vw,42px);
+  font-weight:600;color:var(--text);
+}
 
-				<!-- Project 2 -->
-				<div class="project-card">
-					<div class="project-header">
-						<h3>OPTICAL CAMERA COMMUNICATION</h3>
-						<span class="project-date">JAN 2022 - MAY 2022</span>
-					</div>
-					<p class="project-description">Developed vision-based vehicle localization framework integrating OCC and photogrammetry to estimate positions using LED light signals with real-time relative position tracking.</p>
-					<div class="tech-stack">
-						<span class="tech-badge">MATLAB</span>
-						<span class="tech-badge">OpenCV</span>
-						<span class="tech-badge">Image Processing</span>
-						<span class="tech-badge">Computer Vision</span>
-					</div>
-				</div>
+/* ═══════════════════════════════════════
+   HOME PAGE
+═══════════════════════════════════════ */
+.hero{
+  min-height:calc(100vh - 60px);
+  display:grid;
+  grid-template-rows:1fr auto;
+  padding:80px 0 60px;
+}
+.hero-inner{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:60px;align-items:center;
+}
+.hero-tag{
+  font-size:11px;letter-spacing:.25em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:24px;
+  display:flex;align-items:center;gap:10px;
+}
+.hero-tag::before{content:'';width:32px;height:1px;background:var(--gold);}
+.hero-name{
+  font-family:var(--serif);
+  font-size:clamp(60px,9vw,110px);
+  font-weight:300;line-height:.95;
+  letter-spacing:-.02em;
+  margin-bottom:8px;
+}
+.hero-name strong{font-weight:700;}
+.hero-name em{font-style:italic;color:var(--gold);}
+.hero-role{
+  font-family:var(--serif);
+  font-size:clamp(16px,2.5vw,22px);
+  font-weight:300;font-style:italic;
+  color:var(--muted2);
+  margin-bottom:32px;
+  letter-spacing:.02em;
+}
+.hero-desc{
+  font-size:13px;color:var(--muted);
+  max-width:480px;line-height:2;
+  margin-bottom:40px;
+}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;}
+.btn{
+  font-family:var(--mono);font-size:11px;
+  letter-spacing:.15em;text-transform:uppercase;
+  padding:12px 28px;cursor:pointer;
+  border:1px solid var(--gold);
+  color:var(--gold);background:transparent;
+  transition:background .2s,color .2s;
+  text-decoration:none;display:inline-flex;align-items:center;gap:8px;
+}
+.btn:hover{background:var(--gold);color:var(--bg);}
+.btn-ghost{border-color:var(--border2);color:var(--muted2);}
+.btn-ghost:hover{background:var(--card);color:var(--text);border-color:var(--border2);}
 
-				<!-- Project 3 -->
-				<div class="project-card">
-					<div class="project-header">
-						<h3>INDIAN ROVER CHALLENGE</h3>
-						<span class="project-date">AUG 2019 - JAN 2020</span>
-					</div>
-					<p class="project-description">Developed computer vision module for Mars rover prototype using CNNs for terrain navigation and object detection. Achieved 92%+ accuracy in terrain segmentation with real-time obstacle detection.</p>
-					<div class="tech-stack">
-						<span class="tech-badge">Python</span>
-						<span class="tech-badge">Keras</span>
-						<span class="tech-badge">TensorFlow</span>
-						<span class="tech-badge">OpenCV</span>
-					</div>
-				</div>
+.hero-right{
+  display:flex;flex-direction:column;gap:16px;
+  align-items:flex-end;
+}
+.hero-stat-card{
+  background:var(--card);border:1px solid var(--border);
+  padding:20px 28px;text-align:right;min-width:160px;
+  position:relative;
+}
+.hero-stat-card::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;
+  width:2px;background:var(--gold);opacity:.5;
+}
+.hsc-num{
+  font-family:var(--serif);font-size:36px;font-weight:700;
+  color:var(--gold2);line-height:1;
+}
+.hsc-label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px;}
 
-				<!-- Project 4 -->
-				<div class="project-card">
-					<div class="project-header">
-						<h3>EMBEDDED DEEP LEARNING</h3>
-						<span class="project-date">SEP 2020 - JAN 2021</span>
-					</div>
-					<p class="project-description">Designed and deployed embedded CNN model for real-time thermal image classification with 94% detection accuracy. Optimized neural network inference for limited-resource microprocessor hardware.</p>
-					<div class="tech-stack">
-						<span class="tech-badge">Embedded Deep Learning</span>
-						<span class="tech-badge">CNN</span>
-						<span class="tech-badge">Thermal Imaging</span>
-					</div>
-				</div>
-			</div>
-		</section>
+.hero-scroll{
+  display:flex;align-items:center;gap:12px;
+  font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--muted);padding-top:40px;border-top:1px solid var(--border);
+}
+.hero-scroll::after{
+  content:'';flex:1;height:1px;background:var(--border);
+}
 
-		<!-- Skills Section -->
-		<section id="skills" class="skills-section">
-			<div class="section-header">
-				<h2>AGENT ABILITIES</h2>
-				<div class="header-line"></div>
-			</div>
+/* Quick contact bar */
+.contact-bar{
+  display:flex;gap:32px;flex-wrap:wrap;
+  padding:20px 0;
+  border-top:1px solid var(--border);
+}
+.contact-item{
+  display:flex;align-items:center;gap:8px;
+  font-size:12px;color:var(--muted2);
+  text-decoration:none;
+  transition:color .2s;
+}
+.contact-item:hover{color:var(--gold);}
+.contact-item svg{width:14px;height:14px;flex-shrink:0;}
 
-			<div class="skills-grid">
-				<!-- Programming Languages -->
-				<div class="skill-category">
-					<h3 class="category-title">PROGRAMMING LANGUAGES</h3>
-					<div class="skill-items">
-						<div class="skill-item">Java</div>
-						<div class="skill-item">Python</div>
-						<div class="skill-item">C/C++</div>
-						<div class="skill-item">SQL</div>
-					</div>
-				</div>
+/* Featured projects on home */
+.featured-section{padding:80px 0;}
+.feat-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;background:var(--border);
+}
+.feat-card{
+  background:var(--card);
+  padding:36px 32px;
+  text-decoration:none;color:inherit;
+  position:relative;overflow:hidden;
+  transition:background .25s;
+  display:block;
+}
+.feat-card::after{
+  content:'';position:absolute;
+  bottom:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--gold),var(--blue));
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .3s;
+}
+.feat-card:hover{background:var(--card2);}
+.feat-card:hover::after{transform:scaleX(1);}
+.feat-num{font-size:10px;color:var(--gold);letter-spacing:.2em;margin-bottom:16px;opacity:.6;}
+.feat-name{
+  font-family:var(--serif);font-size:22px;font-weight:600;
+  color:var(--text);margin-bottom:10px;line-height:1.2;
+}
+.feat-desc{font-size:12px;color:var(--muted);line-height:1.85;margin-bottom:20px;}
+.feat-tags{display:flex;gap:8px;flex-wrap:wrap;}
+.tag{
+  font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted2);padding:4px 10px;
+  border:1px solid var(--border2);
+}
+.feat-arrow{
+  position:absolute;top:28px;right:28px;
+  font-size:18px;color:var(--muted);
+  transition:color .2s,transform .2s;
+}
+.feat-card:hover .feat-arrow{color:var(--gold);transform:translate(3px,-3px);}
 
-				<!-- Frameworks & Libraries -->
-				<div class="skill-category">
-					<h3 class="category-title">FRAMEWORKS & LIBRARIES</h3>
-					<div class="skill-items">
-						<div class="skill-item">Spring Boot</div>
-						<div class="skill-item">Spring MVC</div>
-						<div class="skill-item">TensorFlow</div>
-						<div class="skill-item">Keras</div>
-						<div class="skill-item">OpenCV</div>
-						<div class="skill-item">Scikit-learn</div>
-					</div>
-				</div>
+/* ═══════════════════════════════════════
+   EXPERIENCE PAGE
+═══════════════════════════════════════ */
+.exp-page{padding:80px 0;}
+.exp-layout{display:grid;grid-template-columns:2fr 1fr;gap:64px;align-items:start;}
 
-				<!-- Databases -->
-				<div class="skill-category">
-					<h3 class="category-title">DATABASES & STORAGE</h3>
-					<div class="skill-items">
-						<div class="skill-item">MongoDB</div>
-						<div class="skill-item">Elasticsearch</div>
-						<div class="skill-item">Aerospike</div>
-						<div class="skill-item">MySQL</div>
-						<div class="skill-item">Redis</div>
-						<div class="skill-item">Cassandra</div>
-					</div>
-				</div>
+/* Timeline */
+.timeline{position:relative;}
+.timeline::before{
+  content:'';position:absolute;left:0;top:8px;bottom:0;
+  width:1px;background:var(--border2);
+}
+.tl-item{
+  padding-left:32px;padding-bottom:56px;
+  position:relative;
+  animation:fadeUp .6s ease both;
+}
+.tl-item::before{
+  content:'';position:absolute;left:-4px;top:8px;
+  width:9px;height:9px;border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 0 3px var(--bg),0 0 0 4px var(--gold);
+}
+.tl-period{
+  font-size:10px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:8px;
+}
+.tl-role{
+  font-family:var(--serif);font-size:22px;font-weight:600;
+  color:var(--text);line-height:1.2;margin-bottom:4px;
+}
+.tl-company{
+  font-size:12px;color:var(--muted2);margin-bottom:16px;
+  display:flex;align-items:center;gap:8px;
+}
+.tl-company span{
+  font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);padding:3px 8px;border:1px solid var(--border2);
+}
+.tl-bullets{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.tl-bullets li{
+  font-size:12.5px;color:var(--muted);line-height:1.8;
+  padding-left:16px;position:relative;
+}
+.tl-bullets li::before{
+  content:'—';position:absolute;left:0;color:var(--gold);opacity:.5;
+}
+.tl-tech{
+  display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;
+}
+.tech-pill{
+  font-size:10px;color:var(--blue);
+  padding:3px 10px;
+  border:1px solid rgba(123,175,212,.25);
+  background:rgba(123,175,212,.05);
+  letter-spacing:.05em;
+}
 
-				<!-- Tools & Platforms -->
-				<div class="skill-category">
-					<h3 class="category-title">TOOLS & PLATFORMS</h3>
-					<div class="skill-items">
-						<div class="skill-item">Git/GitHub</div>
-						<div class="skill-item">Jenkins</div>
-						<div class="skill-item">Docker</div>
-						<div class="skill-item">Kafka</div>
-						<div class="skill-item">Grafana</div>
-						<div class="skill-item">JIRA</div>
-					</div>
-				</div>
+/* Education + Achievements sidebar */
+.exp-sidebar{display:flex;flex-direction:column;gap:32px;}
+.sidebar-card{
+  background:var(--card);border:1px solid var(--border);
+  padding:28px;
+}
+.sc-label{
+  font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:16px;opacity:.7;
+}
+.sc-title{
+  font-family:var(--serif);font-size:19px;font-weight:600;
+  color:var(--text);margin-bottom:6px;
+}
+.sc-sub{font-size:12px;color:var(--muted2);margin-bottom:4px;}
+.sc-grade{
+  font-family:var(--serif);font-size:28px;font-weight:700;
+  color:var(--gold2);margin-top:12px;
+}
+.sc-grade span{font-size:13px;color:var(--muted);font-family:var(--mono);}
 
-				<!-- Architectural Concepts -->
-				<div class="skill-category">
-					<h3 class="category-title">ARCHITECTURAL EXPERTISE</h3>
-					<div class="skill-items">
-						<div class="skill-item">Microservices</div>
-						<div class="skill-item">Event-Driven Architecture</div>
-						<div class="skill-item">Distributed Systems</div>
-						<div class="skill-item">Cloud Computing</div>
-						<div class="skill-item">Software Design Patterns</div>
-						<div class="skill-item">Low-Level Design</div>
-					</div>
-				</div>
+.achieve-list{display:flex;flex-direction:column;gap:14px;}
+.achieve-item{
+  display:flex;gap:12px;align-items:flex-start;
+  padding:12px 14px;
+  border-left:2px solid var(--gold);
+  background:rgba(201,169,110,.04);
+}
+.achieve-icon{font-size:16px;flex-shrink:0;}
+.achieve-text{font-size:12px;color:var(--muted);line-height:1.7;}
+.achieve-text strong{color:var(--text);font-size:11px;letter-spacing:.05em;}
 
-				<!-- Specializations -->
-				<div class="skill-category">
-					<h3 class="category-title">SPECIALIZATIONS</h3>
-					<div class="skill-items">
-						<div class="skill-item">Backend Development</div>
-						<div class="skill-item">Machine Learning</div>
-						<div class="skill-item">Computer Vision</div>
-						<div class="skill-item">Embedded AI</div>
-						<div class="skill-item">System Design</div>
-						<div class="skill-item">Problem Solving</div>
-					</div>
-				</div>
-			</div>
-		</section>
+/* ═══════════════════════════════════════
+   SKILLS PAGE
+═══════════════════════════════════════ */
+.skills-page{padding:80px 0;}
+.skills-layout{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
+.skill-group{margin-bottom:40px;}
+.sg-label{
+  font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:20px;
+  padding-bottom:10px;border-bottom:1px solid var(--border);
+}
+.skill-tags{display:flex;flex-wrap:wrap;gap:10px;}
+.skill-tag{
+  font-size:12px;color:var(--text);
+  padding:8px 16px;
+  border:1px solid var(--border2);
+  background:var(--card);
+  letter-spacing:.03em;
+  transition:border-color .2s,color .2s,background .2s;
+  cursor:default;
+}
+.skill-tag:hover{border-color:var(--gold);color:var(--gold);background:rgba(201,169,110,.06);}
+.skill-tag.highlight{border-color:rgba(123,175,212,.4);color:var(--blue);background:rgba(123,175,212,.06);}
+.skill-tag.warm{border-color:rgba(201,123,138,.4);color:var(--rose);background:rgba(201,123,138,.06);}
 
-		<!-- Achievements Section -->
-		<section class="achievements-section">
-			<div class="section-header">
-				<h2>COMMENDATIONS</h2>
-				<div class="header-line"></div>
-			</div>
+/* Paradigm wheel */
+.paradigm-list{display:flex;flex-direction:column;gap:12px;}
+.para-item{
+  display:flex;align-items:center;gap:12px;
+  padding:12px 16px;background:var(--card);border:1px solid var(--border);
+}
+.para-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);flex-shrink:0;}
+.para-text{font-size:12.5px;color:var(--muted2);}
 
-			<div class="achievements-grid">
-				<div class="achievement-item">
-					<div class="achievement-icon">🏆</div>
-					<h4>Airtel Hackathon Winner</h4>
-					<p>3rd position - Fraud Prevention & Security Enhancement Solution</p>
-				</div>
+/* ═══════════════════════════════════════
+   PAINTINGS PAGE
+═══════════════════════════════════════ */
+.paint-page{padding:80px 0;}
+.paint-intro{
+  max-width:540px;margin-bottom:60px;
+  font-size:14px;color:var(--muted);line-height:2;
+}
+.paint-intro em{color:var(--gold);font-style:italic;font-family:var(--serif);font-size:16px;}
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-template-rows:auto;
+  gap:16px;
+}
+.gallery-item{
+  position:relative;overflow:hidden;
+  cursor:pointer;
+  background:var(--card);border:1px solid var(--border);
+}
+.gallery-item.tall{grid-row:span 2;}
+.gallery-item.wide{grid-column:span 2;}
+.gallery-placeholder{
+  width:100%;aspect-ratio:4/3;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:10px;
+  background:var(--card);
+  position:relative;overflow:hidden;
+}
+.gallery-item.tall .gallery-placeholder{aspect-ratio:3/5;}
+.gallery-item.wide .gallery-placeholder{aspect-ratio:8/3;}
+.gp-pattern{
+  position:absolute;inset:0;
+  opacity:.12;
+}
+.gp-label{
+  position:relative;z-index:1;
+  font-family:var(--serif);font-size:15px;font-weight:600;
+  color:var(--muted2);
+}
+.gp-sub{
+  position:relative;z-index:1;
+  font-size:10px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--muted);
+}
+.gallery-overlay{
+  position:absolute;inset:0;
+  background:rgba(8,8,16,.7);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:6px;
+  opacity:0;transition:opacity .3s;
+}
+.gallery-item:hover .gallery-overlay{opacity:1;}
+.gallery-overlay span{
+  font-family:var(--serif);font-size:16px;color:var(--gold);
+}
+.gallery-overlay small{font-size:10px;color:var(--muted2);letter-spacing:.1em;}
 
-				<div class="achievement-item">
-					<div class="achievement-icon">🚀</div>
-					<h4>Indian Rover Challenge</h4>
-					<p>9th rank - Autonomous Mars Rover Navigation</p>
-				</div>
+/* Upload hint */
+.upload-hint{
+  margin-top:40px;padding:24px 28px;
+  border:1px dashed var(--border2);
+  background:rgba(201,169,110,.03);
+  font-size:12px;color:var(--muted);
+  display:flex;align-items:center;gap:14px;
+}
+.upload-hint strong{color:var(--gold2);}
 
-				<div class="achievement-item">
-					<div class="achievement-icon">🎖️</div>
-					<h4>International Rover Design Challenge</h4>
-					<p>13th rank - Global Competition IRDC 2020</p>
-				</div>
+/* ═══════════════════════════════════════
+   ABOUT / EXTRAS PAGE
+═══════════════════════════════════════ */
+.about-page{padding:80px 0;}
+.about-layout{display:grid;grid-template-columns:1fr 1fr;gap:60px;}
 
-				<div class="achievement-item">
-					<div class="achievement-icon">📊</div>
-					<h4>Training & Placement Coordinator</h4>
-					<p>Coordinated placement activities for 200+ ECE students</p>
-				</div>
-			</div>
-		</section>
+.about-left p{
+  font-size:13.5px;color:var(--muted);line-height:2;
+}
+.about-left p+p{margin-top:16px;}
+.about-left strong{color:var(--text);}
+.about-left em{color:var(--gold);font-style:italic;font-family:var(--serif);}
 
-		<!-- Education Section -->
-		<section class="education-section">
-			<div class="section-header">
-				<h2>CREDENTIALS</h2>
-				<div class="header-line"></div>
-			</div>
+.extras-section{margin-top:60px;}
+.extra-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px;}
+.extra-card{
+  background:var(--card);border:1px solid var(--border);
+  padding:24px;
+  position:relative;
+}
+.extra-card::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,var(--gold),transparent);
+}
+.ec-icon{font-size:24px;margin-bottom:12px;}
+.ec-title{
+  font-family:var(--serif);font-size:16px;font-weight:600;
+  color:var(--text);margin-bottom:6px;
+}
+.ec-desc{font-size:12px;color:var(--muted);line-height:1.8;}
 
-			<div class="education-container">
-				<div class="education-card">
-					<h3>B.Tech - Electronics and Communication Engineering</h3>
-					<p class="institution">National Institute of Technology, Surat</p>
-					<p class="details">Aug 2018 - May 2022 • GPA: 8.6/10</p>
-				</div>
-			</div>
-		</section>
+/* Personal info cards */
+.info-stack{display:flex;flex-direction:column;gap:12px;}
+.info-row{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:14px 16px;
+  background:var(--card);border:1px solid var(--border);
+  border-left:2px solid var(--gold);
+}
+.ir-icon{font-size:14px;flex-shrink:0;margin-top:2px;}
+.ir-body{flex:1;}
+.ir-label{
+  font-size:9px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:3px;
+}
+.ir-val{font-size:13px;color:var(--text);}
+.ir-val a{color:var(--gold);text-decoration:none;}
+.ir-val a:hover{text-decoration:underline;}
 
-		<!-- Contact Section -->
-		<section id="contact" class="contact-section">
-			<div class="section-header">
-				<h2>ENGAGEMENT PROTOCOL</h2>
-				<div class="header-line"></div>
-			</div>
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(16px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.fade-up{animation:fadeUp .6s ease both;}
+.delay-1{animation-delay:.1s}
+.delay-2{animation-delay:.2s}
+.delay-3{animation-delay:.3s}
+.delay-4{animation-delay:.4s}
 
-			<div class="contact-content">
-				<p class="contact-intro">Ready to collaborate on next-generation systems and AI-driven solutions.</p>
-				
-				<div class="contact-info">
-					<a href="mailto:pateltanvi325@gmail.com" class="contact-link">
-						<i class="fas fa-envelope"></i>
-						<span>pateltanvi325@gmail.com</span>
-					</a>
-					<a href="tel:+917069224818" class="contact-link">
-						<i class="fas fa-phone"></i>
-						<span>(+91) 70692-24818</span>
-					</a>
-					<a href="https://linkedin.com/in/tanvipatel1007" class="contact-link" target="_blank">
-						<i class="fab fa-linkedin"></i>
-						<span>LinkedIn</span>
-					</a>
-					<a href="https://github.com/Tanu1007" class="contact-link" target="_blank">
-						<i class="fab fa-github"></i>
-						<span>GitHub</span>
-					</a>
-				</div>
-			</div>
-		</section>
+/* ─── RESPONSIVE ─── */
+@media(max-width:760px){
+  nav{padding:0 20px;}
+  .nav-link{padding:0 10px;font-size:10px;}
+  .wrap{padding:0 20px;}
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-right{display:none;}
+  .feat-grid{grid-template-columns:1fr;}
+  .exp-layout{grid-template-columns:1fr;}
+  .skills-layout{grid-template-columns:1fr;}
+  .gallery-grid{grid-template-columns:1fr 1fr;}
+  .gallery-item.wide{grid-column:span 1;}
+  .gallery-item.tall{grid-row:span 1;}
+  .about-layout{grid-template-columns:1fr;}
+  .extra-cards{grid-template-columns:1fr;}
+  .info-grid-2{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
 
-		<!-- Footer -->
-		<footer class="valorant-footer">
-			<p>&copy; 2025 TANVI PATEL • AGENT PROTOCOL ACTIVE</p>
-		</footer>
+<!-- ═══ NAV ═══ -->
+<nav>
+  <div class="nav-logo" onclick="showPage('home')">TP</div>
+  <div class="nav-links">
+    <div class="nav-link active" data-page="home"    onclick="showPage('home')">Home</div>
+    <div class="nav-link"        data-page="exp"     onclick="showPage('exp')">Experience</div>
+    <div class="nav-link"        data-page="skills"  onclick="showPage('skills')">Skills</div>
+    <div class="nav-link"        data-page="paint"   onclick="showPage('paint')">Paintings</div>
+    <div class="nav-link"        data-page="about"   onclick="showPage('about')">About</div>
+  </div>
+</nav>
 
-		<script>
-			// Smooth scrolling
-			document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-				anchor.addEventListener('click', function (e) {
-					e.preventDefault();
-					const target = document.querySelector(this.getAttribute('href'));
-					if (target) {
-						target.scrollIntoView({ behavior: 'smooth' });
-					}
-				});
-			});
+<!-- ═══════════════════════════════════════
+  PAGE: HOME
+═══════════════════════════════════════ -->
+<div class="page active" id="page-home">
+<div class="wrap">
 
-			// Active nav highlighting
-			window.addEventListener('scroll', () => {
-				const sections = document.querySelectorAll('section');
-				const navLinks = document.querySelectorAll('.nav-link');
-				
-				sections.forEach(section => {
-					const sectionTop = section.offsetTop - 100;
-					const sectionBottom = sectionTop + section.offsetHeight;
-					
-					if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
-						navLinks.forEach(link => link.classList.remove('active'));
-						const activeLink = document.querySelector(`a[href="#${section.id}"]`);
-						if (activeLink) activeLink.classList.add('active');
-					}
-				});
-			});
-		</script>
-	</body>
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="fade-up">
+        <p class="hero-tag">Backend Engineer · AI Researcher</p>
+        <h1 class="hero-name">
+          <strong>Tanvi</strong><br>
+          <em>Patel</em>
+        </h1>
+        <p class="hero-role">Physical AI &amp; Embodied Agents</p>
+        <p class="hero-desc">
+          Building intelligent systems at the intersection of backend engineering,
+          computer vision, and autonomous agents. Previously at Airtel X Labs;
+          NIT Surat alumni.
+        </p>
+        <div class="hero-ctas">
+          <div class="btn" onclick="showPage('exp')">View Experience</div>
+          <a class="btn btn-ghost" href="https://github.com/Tanu1007" target="_blank">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="hero-right fade-up delay-2">
+        <div class="hero-stat-card">
+          <div class="hsc-num">3+</div>
+          <div class="hsc-label">Years at Airtel</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hsc-num">3500</div>
+          <div class="hsc-label">TPS Achieved</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hsc-num">8.6</div>
+          <div class="hsc-label">CGPA · NIT Surat</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact bar -->
+    <div class="contact-bar fade-up delay-3">
+      <a class="contact-item" href="mailto:pateltanvi325@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        pateltanvi325@gmail.com
+      </a>
+      <a class="contact-item" href="https://github.com/Tanu1007" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        github.com/Tanu1007
+      </a>
+      <a class="contact-item" href="https://linkedin.com/in/tanvipatel1007" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        linkedin.com/in/tanvipatel1007
+      </a>
+      <span class="contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        New Delhi, India
+      </span>
+    </div>
+  </div>
+
+  <!-- Featured Projects -->
+  <div class="featured-section">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <h2 class="sec-title">Featured Projects</h2>
+    </div>
+    <div class="feat-grid">
+      <a class="feat-card fade-up" href="https://github.com/Tanu1007" target="_blank">
+        <span class="feat-arrow">↗</span>
+        <div class="feat-num">001</div>
+        <div class="feat-name">Arrow &amp; Ball Detection</div>
+        <div class="feat-desc">Real-time computer vision system for detecting and tracking arrows and balls using deep learning and OpenCV.</div>
+        <div class="feat-tags">
+          <span class="tag">Python</span>
+          <span class="tag">OpenCV</span>
+          <span class="tag">CV</span>
+        </div>
+      </a>
+      <a class="feat-card fade-up delay-1" href="https://github.com/Tanu1007" target="_blank">
+        <span class="feat-arrow">↗</span>
+        <div class="feat-num">002</div>
+        <div class="feat-name">Voice Controlled Lights</div>
+        <div class="feat-desc">IoT system enabling hands-free control of lighting via voice commands using NLP and embedded hardware integration.</div>
+        <div class="feat-tags">
+          <span class="tag">Python</span>
+          <span class="tag">IoT</span>
+          <span class="tag">NLP</span>
+        </div>
+      </a>
+      <a class="feat-card fade-up delay-2" href="https://github.com/Tanu1007" target="_blank">
+        <span class="feat-arrow">↗</span>
+        <div class="feat-num">003</div>
+        <div class="feat-name">IPL 2020 Analysis</div>
+        <div class="feat-desc">Data analysis and visualisation of IPL 2020 season — player performance, match outcomes, and statistical insights.</div>
+        <div class="feat-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">Analysis</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════
+  PAGE: EXPERIENCE
+═══════════════════════════════════════ -->
+<div class="page" id="page-exp">
+<div class="wrap">
+<div class="exp-page">
+  <div class="sec-head">
+    <span class="sec-num">02</span>
+    <h2 class="sec-title">Experience</h2>
+  </div>
+  <div class="exp-layout">
+
+    <!-- Timeline -->
+    <div class="timeline">
+
+      <!-- Airtel -->
+      <div class="tl-item">
+        <div class="tl-period">Jul 2022 — Oct 2025</div>
+        <div class="tl-role">Backend Engineer</div>
+        <div class="tl-company">
+          Airtel X Labs · Gurugram
+          <span>Deputy Manager</span>
+        </div>
+        <ul class="tl-bullets">
+          <li>Led deployments across 10 African OpCos (Kenya, Tanzania, DRC &amp; others), scaling communication services to millions of users.</li>
+          <li>Engineered Prepaid APIs and migrated the wallet system from SQL to Aerospike, achieving <strong style="color:var(--text)">5× faster transactions</strong> at 1000+ TPS.</li>
+          <li>Integrated Payment Gateway modules — Airtel Money, DPO, Cellulant — with robust callback and refund mechanisms.</li>
+          <li>Implemented 2FA &amp; OAuth 2.0 for Airtel IQ Dashboard, improving authentication speed by 15%.</li>
+          <li>Built the IQ Contact Book microservice for 1000+ enterprise clients with bulk upserts, segmentation, and campaign scheduling.</li>
+          <li>Rearchitected the Messaging Service, increasing throughput from <strong style="color:var(--text)">1500 → 3500 TPS</strong> by eliminating Kafka connector bottlenecks.</li>
+          <li>Automated SMS onboarding &amp; SIM call-recording workflows, improving process efficiency by <strong style="color:var(--text)">60%</strong>.</li>
+        </ul>
+        <div class="tl-tech">
+          <span class="tech-pill">Java</span><span class="tech-pill">Spring Boot</span>
+          <span class="tech-pill">Kafka</span><span class="tech-pill">Aerospike</span>
+          <span class="tech-pill">Elasticsearch</span><span class="tech-pill">MySQL</span>
+          <span class="tech-pill">MongoDB</span><span class="tech-pill">Grafana</span>
+        </div>
+      </div>
+
+      <!-- Wipro -->
+      <div class="tl-item">
+        <div class="tl-period">Jun 2021 — Jul 2021</div>
+        <div class="tl-role">Turbo Intern</div>
+        <div class="tl-company">Wipro Limited · Remote</div>
+        <ul class="tl-bullets">
+          <li>Built a real-time computer vision system using Python &amp; OpenCV to analyse ECG graphs, deployed across 100+ ICUs.</li>
+          <li>Improved medical data accuracy through automated anomaly detection and real-time alerting.</li>
+        </ul>
+        <div class="tl-tech">
+          <span class="tech-pill">Python</span><span class="tech-pill">OpenCV</span><span class="tech-pill">Computer Vision</span>
+        </div>
+      </div>
+
+      <!-- Geliose -->
+      <div class="tl-item">
+        <div class="tl-period">Jun 2021 — Jul 2021</div>
+        <div class="tl-role">Junior Mobile App Developer</div>
+        <div class="tl-company">Geliose Mobility · Remote</div>
+        <ul class="tl-bullets">
+          <li>Built an Android app for an EV startup with user authentication, EV mapping, Bluetooth discovery, and real-time chat for 5,000+ users.</li>
+        </ul>
+        <div class="tl-tech">
+          <span class="tech-pill">Android</span><span class="tech-pill">Java</span><span class="tech-pill">Bluetooth</span>
+        </div>
+      </div>
+
+      <!-- NIT Projects -->
+      <div class="tl-item">
+        <div class="tl-period">2019 — 2022</div>
+        <div class="tl-role">Academic Projects</div>
+        <div class="tl-company">NIT Surat · Surat</div>
+        <ul class="tl-bullets">
+          <li><strong style="color:var(--text)">Indoor Photovoltaics IoT</strong> — simulated a lead-free perovskite solar cell achieving 28.9% efficiency under LED illumination for IoT energy harvesting.</li>
+          <li><strong style="color:var(--text)">OCC Localization</strong> — vision-based vehicle localization integrating optical camera communication and photogrammetry for real-time position tracking.</li>
+          <li><strong style="color:var(--text)">Mars Rover (IRC 2020)</strong> — developed CNN-based terrain navigation achieving 92%+ accuracy; reached 9th rank globally.</li>
+          <li><strong style="color:var(--text)">Swadeshi Microprocessor</strong> — embedded CNN for real-time thermal image classification at 94% accuracy, improving throughput 38% on limited hardware.</li>
+        </ul>
+        <div class="tl-tech">
+          <span class="tech-pill">Python</span><span class="tech-pill">TensorFlow</span>
+          <span class="tech-pill">Keras</span><span class="tech-pill">OpenCV</span>
+          <span class="tech-pill">MATLAB</span><span class="tech-pill">Embedded DL</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div class="exp-sidebar">
+      <!-- Education -->
+      <div class="sidebar-card">
+        <div class="sc-label">Education</div>
+        <div class="sc-title">National Institute of Technology, Surat</div>
+        <div class="sc-sub">B.Tech — Electronics &amp; Communication Engineering</div>
+        <div class="sc-sub" style="color:var(--muted);font-size:11px;">Aug 2018 – May 2022</div>
+        <div class="sc-grade">8.6 <span>/ 10 CGPA</span></div>
+      </div>
+
+      <!-- Achievements -->
+      <div class="sidebar-card">
+        <div class="sc-label">Achievements</div>
+        <div class="achieve-list">
+          <div class="achieve-item">
+            <div class="achieve-icon">🥉</div>
+            <div class="achieve-text">
+              <strong>3rd Place — Airtel Hackathon (Samadhan)</strong>
+              Implemented a solution to reduce OTP-based fraud and enhance transaction security.
+            </div>
+          </div>
+          <div class="achieve-item">
+            <div class="achieve-icon">🚀</div>
+            <div class="achieve-text">
+              <strong>9th — Indian Rover Challenge 2020</strong>
+              13th in IRDC 2020 · 17th in International Mars Hackathon 2020 (MSSA).
+            </div>
+          </div>
+          <div class="achieve-item">
+            <div class="achieve-icon">🎓</div>
+            <div class="achieve-text">
+              <strong>T&amp;P Coordinator, ECE Dept.</strong>
+              Coordinated placements for 200+ students; liaised with recruiters and ran interview readiness programs.
+            </div>
+          </div>
+          <div class="achieve-item">
+            <div class="achieve-icon">🤝</div>
+            <div class="achieve-text">
+              <strong>Mentor — Drishti Technical Club</strong>
+              Guided junior members on ML projects; conducted hands-on workshops and project reviews.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════
+  PAGE: SKILLS
+═══════════════════════════════════════ -->
+<div class="page" id="page-skills">
+<div class="wrap">
+<div class="skills-page">
+  <div class="sec-head">
+    <span class="sec-num">03</span>
+    <h2 class="sec-title">Skills</h2>
+  </div>
+  <div class="skills-layout">
+    <div>
+      <div class="skill-group">
+        <div class="sg-label">Programming Languages</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">C / C++</span>
+          <span class="skill-tag">SQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="sg-label">Frameworks &amp; Libraries</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Spring Boot</span>
+          <span class="skill-tag highlight">Spring MVC</span>
+          <span class="skill-tag highlight">Kafka</span>
+          <span class="skill-tag highlight">RabbitMQ</span>
+          <span class="skill-tag highlight">AWS SQS</span>
+          <span class="skill-tag warm">Keras</span>
+          <span class="skill-tag warm">TensorFlow</span>
+          <span class="skill-tag warm">Scikit-learn</span>
+          <span class="skill-tag warm">Pandas</span>
+          <span class="skill-tag warm">NumPy</span>
+          <span class="skill-tag warm">OpenCV</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="sg-label">Databases &amp; Cloud</div>
+        <div class="skill-tags">
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">Elasticsearch</span>
+          <span class="skill-tag">Aerospike</span>
+          <span class="skill-tag">Redis</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">Cassandra</span>
+          <span class="skill-tag">AWS S3</span>
+          <span class="skill-tag">GCP</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="sg-label">Platforms &amp; Tools</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Git / GitHub</span>
+          <span class="skill-tag">Grafana</span>
+          <span class="skill-tag">Kong</span>
+          <span class="skill-tag">Jenkins</span>
+          <span class="skill-tag">JIRA</span>
+          <span class="skill-tag">Android Studio</span>
+          <span class="skill-tag">FluentD</span>
+          <span class="skill-tag">StatsD</span>
+          <span class="skill-tag">Jolokia</span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="skill-group">
+        <div class="sg-label">Programming Paradigms</div>
+        <div class="paradigm-list">
+          <div class="para-item"><div class="para-dot"></div><div class="para-text">Microservices Architecture</div></div>
+          <div class="para-item"><div class="para-dot" style="background:var(--blue)"></div><div class="para-text">Reactive &amp; Event-Driven Programming</div></div>
+          <div class="para-item"><div class="para-dot" style="background:var(--rose)"></div><div class="para-text">Machine Learning &amp; Deep Learning</div></div>
+          <div class="para-item"><div class="para-dot"></div><div class="para-text">Computer Vision</div></div>
+          <div class="para-item"><div class="para-dot" style="background:var(--blue)"></div><div class="para-text">Aspect-Oriented Programming (AOP)</div></div>
+          <div class="para-item"><div class="para-dot" style="background:var(--rose)"></div><div class="para-text">Low-Level Design (LLD) &amp; DSA</div></div>
+          <div class="para-item"><div class="para-dot"></div><div class="para-text">Software Design Patterns</div></div>
+          <div class="para-item"><div class="para-dot" style="background:var(--blue)"></div><div class="para-text">Distributed Systems</div></div>
+          <div class="para-item"><div class="para-dot" style="background:var(--rose)"></div><div class="para-text">Embedded Deep Learning</div></div>
+        </div>
+      </div>
+
+      <div class="skill-group" style="margin-top:32px;">
+        <div class="sg-label">Areas of Expertise</div>
+        <div class="skill-tags" style="gap:10px;">
+          <span class="skill-tag">Backend Development</span>
+          <span class="skill-tag">Distributed Systems</span>
+          <span class="skill-tag">Cloud Computing</span>
+          <span class="skill-tag highlight">Physical AI</span>
+          <span class="skill-tag highlight">Embodied Agents</span>
+          <span class="skill-tag warm">Computer Vision</span>
+          <span class="skill-tag">Problem Solving</span>
+          <span class="skill-tag">Data Structures &amp; Algorithms</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════
+  PAGE: PAINTINGS
+═══════════════════════════════════════ -->
+<div class="page" id="page-paint">
+<div class="wrap">
+<div class="paint-page">
+  <div class="sec-head">
+    <span class="sec-num">04</span>
+    <h2 class="sec-title">Paintings</h2>
+  </div>
+  <p class="paint-intro">
+    Beyond code and systems, I find expression through paint and canvas.
+    <em>"Art is how I process the world that engineering tries to optimise."</em>
+    Each piece is a quiet experiment in colour, texture, and feeling.
+  </p>
+
+  <div class="gallery-grid">
+
+    <!-- Tall featured piece -->
+    <div class="gallery-item tall">
+      <div class="gallery-placeholder">
+        <svg class="gp-pattern" viewBox="0 0 300 500" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#c9a96e"/><stop offset="100%" stop-color="#7bafd4"/></linearGradient></defs>
+          <rect width="300" height="500" fill="url(#g1)"/>
+          <circle cx="150" cy="200" r="120" fill="none" stroke="white" stroke-width="0.5" opacity="0.3"/>
+          <circle cx="150" cy="200" r="80" fill="none" stroke="white" stroke-width="0.5" opacity="0.3"/>
+          <line x1="0" y1="200" x2="300" y2="200" stroke="white" stroke-width="0.5" opacity="0.2"/>
+          <line x1="150" y1="0" x2="150" y2="500" stroke="white" stroke-width="0.5" opacity="0.2"/>
+        </svg>
+        <span class="gp-label">Painting 01</span>
+        <span class="gp-sub">Add your image here</span>
+      </div>
+      <div class="gallery-overlay">
+        <span>Untitled 01</span>
+        <small>Replace with your painting</small>
+      </div>
+    </div>
+
+    <!-- 2×2 right side -->
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <svg class="gp-pattern" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="g2" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#c97b8a"/><stop offset="100%" stop-color="#c9a96e"/></linearGradient></defs>
+          <rect width="300" height="200" fill="url(#g2)"/>
+          <polygon points="150,30 270,170 30,170" fill="none" stroke="white" stroke-width="0.5" opacity="0.25"/>
+        </svg>
+        <span class="gp-label">Painting 02</span>
+        <span class="gp-sub">Add your image here</span>
+      </div>
+      <div class="gallery-overlay"><span>Untitled 02</span><small>Replace with your painting</small></div>
+    </div>
+
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <svg class="gp-pattern" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="g3" x1="1" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7bafd4"/><stop offset="100%" stop-color="#c97b8a"/></linearGradient></defs>
+          <rect width="300" height="200" fill="url(#g3)"/>
+          <rect x="60" y="40" width="180" height="120" fill="none" stroke="white" stroke-width="0.5" opacity="0.25"/>
+          <rect x="90" y="60" width="120" height="80" fill="none" stroke="white" stroke-width="0.5" opacity="0.2"/>
+        </svg>
+        <span class="gp-label">Painting 03</span>
+        <span class="gp-sub">Add your image here</span>
+      </div>
+      <div class="gallery-overlay"><span>Untitled 03</span><small>Replace with your painting</small></div>
+    </div>
+
+    <!-- Wide piece -->
+    <div class="gallery-item wide">
+      <div class="gallery-placeholder">
+        <svg class="gp-pattern" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="g4" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#c9a96e"/><stop offset="50%" stop-color="#c97b8a"/><stop offset="100%" stop-color="#7bafd4"/></linearGradient></defs>
+          <rect width="600" height="200" fill="url(#g4)"/>
+          <path d="M0,100 Q150,40 300,100 T600,100" fill="none" stroke="white" stroke-width="0.8" opacity="0.25"/>
+          <path d="M0,120 Q150,60 300,120 T600,120" fill="none" stroke="white" stroke-width="0.5" opacity="0.15"/>
+        </svg>
+        <span class="gp-label">Painting 04</span>
+        <span class="gp-sub">Add your image here</span>
+      </div>
+      <div class="gallery-overlay"><span>Untitled 04</span><small>Replace with your painting</small></div>
+    </div>
+
+    <!-- Two small -->
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <svg class="gp-pattern" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+          <defs><radialGradient id="g5" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#e8c98a"/><stop offset="100%" stop-color="#c9a96e" stop-opacity="0"/></radialGradient></defs>
+          <rect width="300" height="200" fill="#131320"/>
+          <circle cx="150" cy="100" r="80" fill="url(#g5)" opacity="0.6"/>
+        </svg>
+        <span class="gp-label">Painting 05</span>
+        <span class="gp-sub">Add your image here</span>
+      </div>
+      <div class="gallery-overlay"><span>Untitled 05</span><small>Replace with your painting</small></div>
+    </div>
+
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <svg class="gp-pattern" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+          <rect width="300" height="200" fill="#16161f"/>
+          <line x1="0" y1="0" x2="300" y2="200" stroke="#c9a96e" stroke-width="0.5" opacity="0.4"/>
+          <line x1="300" y1="0" x2="0" y2="200" stroke="#7bafd4" stroke-width="0.5" opacity="0.4"/>
+          <circle cx="150" cy="100" r="40" fill="none" stroke="#c97b8a" stroke-width="0.5" opacity="0.5"/>
+        </svg>
+        <span class="gp-label">Painting 06</span>
+        <span class="gp-sub">Add your image here</span>
+      </div>
+      <div class="gallery-overlay"><span>Untitled 06</span><small>Replace with your painting</small></div>
+    </div>
+
+  </div>
+
+  <div class="upload-hint">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+    <div>
+      <strong>To add your paintings:</strong> replace each <code style="color:var(--gold);font-size:11px;">&lt;div class="gallery-placeholder"&gt;</code>
+      with an <code style="color:var(--gold);font-size:11px;">&lt;img src="your-image-url" /&gt;</code>,
+      or paste image URLs directly. You can also add titles in the overlay spans.
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════
+  PAGE: ABOUT
+═══════════════════════════════════════ -->
+<div class="page" id="page-about">
+<div class="wrap">
+<div class="about-page">
+  <div class="sec-head">
+    <span class="sec-num">05</span>
+    <h2 class="sec-title">About</h2>
+  </div>
+
+  <div class="about-layout">
+    <div class="about-left">
+      <p>
+        I'm <strong>Tanvi Patel</strong>, a backend engineer and AI researcher based in
+        <em>New Delhi, India</em>. I studied Electronics &amp; Communication Engineering
+        at NIT Surat, where I developed a deep interest in the intersection of embedded
+        systems, computer vision, and intelligent machines.
+      </p>
+      <p>
+        At <strong>Airtel X Labs</strong>, I spent three years building the communication
+        and payments infrastructure used by millions across Africa and India — scaling
+        messaging systems to <strong>3500 TPS</strong>, migrating core databases, and
+        leading cross-border deployments across 10 countries.
+      </p>
+      <p>
+        My long-term goal is to pursue advanced work in
+        <em>Physical AI and embodied agents</em> — building systems that perceive,
+        reason, and act in the real world. I'm interested in the full stack:
+        from low-level perception pipelines to high-level reasoning architectures.
+      </p>
+      <p>
+        When I'm not writing code or reading research papers, I paint. I also mentor
+        junior engineers and students, and have coordinated placements for 200+ students
+        at NIT Surat as Training &amp; Placement Coordinator.
+      </p>
+    </div>
+
+    <div>
+      <div class="info-stack">
+        <div class="info-row">
+          <div class="ir-icon">📍</div>
+          <div class="ir-body">
+            <div class="ir-label">Location</div>
+            <div class="ir-val">New Delhi, India</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="ir-icon">📧</div>
+          <div class="ir-body">
+            <div class="ir-label">Email</div>
+            <div class="ir-val"><a href="mailto:pateltanvi325@gmail.com">pateltanvi325@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="ir-icon">🐙</div>
+          <div class="ir-body">
+            <div class="ir-label">GitHub</div>
+            <div class="ir-val"><a href="https://github.com/Tanu1007" target="_blank">github.com/Tanu1007</a></div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="ir-icon">💼</div>
+          <div class="ir-body">
+            <div class="ir-label">LinkedIn</div>
+            <div class="ir-val"><a href="https://linkedin.com/in/tanvipatel1007" target="_blank">tanvipatel1007</a></div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="ir-icon">📱</div>
+          <div class="ir-body">
+            <div class="ir-label">Phone</div>
+            <div class="ir-val">+91 70692-24818</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="ir-icon">🎓</div>
+          <div class="ir-body">
+            <div class="ir-label">Education</div>
+            <div class="ir-val">B.Tech ECE · NIT Surat · 8.6 CGPA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Extra-curricular -->
+  <div class="extras-section">
+    <div class="sec-head" style="margin-top:0;">
+      <span class="sec-num">05.1</span>
+      <h2 class="sec-title">Extra-Curricular</h2>
+    </div>
+    <div class="extra-cards">
+      <div class="extra-card fade-up">
+        <div class="ec-icon">🎨</div>
+        <div class="ec-title">Painting</div>
+        <div class="ec-desc">Exploring colour, texture, and form on canvas. Art as a mode of thinking outside the binary world of systems engineering.</div>
+      </div>
+      <div class="extra-card fade-up delay-1">
+        <div class="ec-icon">🤝</div>
+        <div class="ec-title">Mentorship — Drishti Technical Club</div>
+        <div class="ec-desc">Guided junior members on ML projects at NIT Surat; ran hands-on workshops and project reviews in the technical club.</div>
+      </div>
+      <div class="extra-card fade-up delay-2">
+        <div class="ec-icon">🎓</div>
+        <div class="ec-title">Training &amp; Placement Coordinator</div>
+        <div class="ec-desc">Coordinated campus placements for 200+ ECE students, liaised with recruiters, and ran interview readiness programs.</div>
+      </div>
+      <div class="extra-card fade-up delay-3">
+        <div class="ec-icon">🚀</div>
+        <div class="ec-title">Competitive Engineering</div>
+        <div class="ec-desc">Indian Rover Challenge 2020 (9th), International Rover Design Challenge (13th), International Mars Hackathon (17th) — MSSA.</div>
+      </div>
+      <div class="extra-card fade-up delay-1">
+        <div class="ec-icon">🔒</div>
+        <div class="ec-title">Airtel Hackathon — Samadhan</div>
+        <div class="ec-desc">3rd place for designing a system to reduce OTP-based fraud and enhance transaction security across Airtel's platforms.</div>
+      </div>
+      <div class="extra-card fade-up delay-2">
+        <div class="ec-icon">📚</div>
+        <div class="ec-title">Continuous Learning</div>
+        <div class="ec-desc">Completed courses in Spring Boot, Neural Networks &amp; Deep Learning, and Java — staying sharp at the edge of backend and AI research.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+
+<script>
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  document.querySelector(`[data-page="${id}"]`).classList.add('active');
+  window.scrollTo(0, 0);
+}
+</script>
+</body>
 </html>
